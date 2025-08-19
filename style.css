@@ -3,6 +3,41 @@ body, html {
     padding: 0;
 }
 
+/* Basic reset */
+nav ul {
+  list-style: none;           /* remove bullets */
+  margin: 0;
+  padding: 0;
+  display: flex;              /* horizontal layout */
+  justify-content: center;    /* center items */
+  background-color: #333;     /* dark bar */
+}
+
+nav ul li {
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  padding: 14px 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #575757; /* highlight on hover */
+}
+h1 {
+  font-size: 48px; /* make it big so the gradient shows */
+  text-align: center;
+  background: linear-gradient(to right, green, red); /* gradient colors */
+  -webkit-background-clip: text;  /* for Chrome/Safari */
+  -webkit-text-fill-color: transparent; /* make background show through text */
+  background-clip: text; /* for Firefox */
+}
+
 .cart-body {
     display: flex;
     flex-direction: column;
@@ -120,3 +155,4 @@ main {
     border-radius: 5px;
     margin: 0 5px;
 }
+
