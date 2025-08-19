@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Food App</h1>
+    </header>
+    <main>
+        <section id="menu">
+            <h2>Menu</h2>
+            <ul>
+                <li>Pizza</li>
+                <li>Burger</li>
+                <li>Pasta</li>
+                <li>Salad</li>
+            </ul>
+        </section>
+        <section id="order">
+            <h2>Your Order</h2>
+            <div id="order-summary">
+                <p>No items in your order.</p>
+                <a href="cart.html">View Cart</a>
+            </div>
+            <a href="cart.html">View Cart</a>
+
+        </section>
+            <h2>Photo Gallery</h2>
+
+        <section id="photo-section">
+            <div class="photo">
+                <img id="piz" src="pizza.jpg" alt="Pizza">
+                <p>Delicious Pizza</p>
+                <p class="caption">A classic Italian dish with a crispy crust.</p>
+                <p id="pizza-price">$12.99</p>
+                <table class="quantity">
+                    <tr>
+                        <td><label for="quantity">Quantity:</label></td>
+                        <td><button class="remove-item">-</button></td>
+                        <td><p class = "total-items" value="1">1</p></td>
+                        <td><button class="add-item">+</button></td>
+
+                    </tr>
+                </table>
+                <button class="order-button">Order Now</button>
+            </div>
+            <div class="photo">
+                <img id  = "burger" src="burger.jpg" alt="Burger">
+                <p>Juicy Burger</p>
+                <p class="caption">A mouth-watering beef burger with cheese.</p>
+                <p id="burger-price">$10.99</p>
+                <table class="quantity">
+                    <tr>
+                        <td><label for="quantity">Quantity:</label></td>
+                        <td><button class="remove-item">-</button></td>
+                        <td><p class = "total-items" value="1">1</p></td>
+                        <td><button class="add-item">+</button></td>
+
+                    </tr>
+                </table>
+                <button class="order-button">Order Now</button>
+            </div>
+            <div class="photo">
+                <img src="pasta.jpg" alt="Pasta">
+                <p>Italian Pasta</p>
+                <p class="caption">Creamy Alfredo pasta with mushrooms.</p>
+                <p id="pasta-price">$11.99</p>
+                <table class="quantity">
+                    <tr>
+                        <td><label for="quantity">Quantity:</label></td>
+                        <td><button class="remove-item">-</button></td>
+                        <td><p class = "total-items" value="1">1</p></td>
+                        <td><button class="add-item">+</button></td>
+
+                    </tr>
+                </table>
+                <button class="order-button">Order Now</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Food App</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

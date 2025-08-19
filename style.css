@@ -1,0 +1,122 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.cart-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa; /* Light gray background */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+main {
+    padding: 0 20px; /* Optional: add if you want spacing around content */
+}
+
+#burger{
+    height:400px;
+}
+
+#photo-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 100%;
+}
+
+.photo {
+ width: 400px !important;
+    height: 700px !important;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+
+    /* ... (other styles) ... */
+}
+
+.photo img {
+    width: 100%;
+    height: 75%;
+    flex-grow: 1; /* Takes remaining space */
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.photo p {
+    padding: 10px;
+    flex-shrink: 0; /* Prevents caption from shrinking */
+}
+.photo .caption {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+}
+
+.photo:hover {
+    background-color: #f0f0f0; /* Light gray background on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: background-color 0.6s ease, box-shadow 0.6s ease-in-out;
+    border-radius: 25px;
+    border: 5px  solid green;
+}
+
+.order-button, #checkout, #continue-shopping {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.order-button:hover {
+    background-color: #218838;
+}
+
+.quantity {
+    margin-top: 10px;
+    margin-bottom:10px;
+    display: flex;
+    justify-content: center;
+}
+
+.add-item,
+.remove-item {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: background-color 0.7s ease;
+}
+
+.add-item:hover,
+.remove-item:hover {
+    background-color: #0056b3;
+}
+
+.total-items {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    margin: 0 5px;
+}
