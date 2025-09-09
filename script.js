@@ -52,11 +52,23 @@ function updateOrderSummary() {
     const itemTotal = item.price * item.quantity;
     total += itemTotal;
 
-    orderSummary.innerHTML += `
+    orderSummary.innerHTML +=
+    `<table>
+    <tr>
+    <td>
       <div class="order-item">
         <p>${item.name} — ${item.quantity} × $${item.price.toFixed(2)} 
         = $${itemTotal.toFixed(2)}</p>
       </div>
+    </td>
+    <td>
+      <button class="remove-item" data-id="${item.id}">-</button>
+    </td>
+    <td>
+      <button class="add-item" data-id="${item.id}">+</button>
+    </td>
+    </tr>
+    </table>
     `;
   });
 

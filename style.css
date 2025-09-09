@@ -42,7 +42,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa; /* Light gray background */
+    background-color: linear-gradient(to right, green,yellow); /* Light gray background */
     font-family: Arial, sans-serif;
     color: #333;
 }
@@ -156,3 +156,21 @@ main {
     margin: 0 5px;
 }
 
+#order-summary {
+    width: 80%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.remove-item
+{
+    background-color: #dc3545;
+}
+
+.add-item{
+    background-color: #28a745;
+    }
