@@ -57,15 +57,20 @@ function updateOrderSummary() {
     <tr>
     <td>
       <div class="order-item">
-        <p>${item.name} — ${item.quantity} × $${item.price.toFixed(2)} 
-        = $${itemTotal.toFixed(2)}</p>
-      </div>
+  <p>
+    ${item.name} — 
+    <span class="total-items">${item.quantity}</span> × 
+    $${item.price.toFixed(2)} = 
+    $${itemTotal.toFixed(2)}
+  </p>
+</div>
+
     </td>
     <td>
-      <button class="remove-item" data-id="${item.id}">-</button>
+      <button id="remove-item-from-cart-${item.id}" class="remove-item" data-id="${item.id}">-</button>
     </td>
     <td>
-      <button class="add-item" data-id="${item.id}">+</button>
+      <button id="add-item-to-cart-${item.id}" class="add-item" data-id="${item.id}">+</button>
     </td>
     </tr>
     </table>
@@ -98,6 +103,33 @@ function wireProductCards() {
       counter.textContent = String(next);
     });
   });
+
+  //for cart page
+  document.querySelectorAll(".remove-item-from-cart").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const itemId = btn.getAttribute("data-id");
+    const itemIndex = orderItems.findIndex((it) => it.id === itemId);
+    
+    if (itemIndex !== -1) {
+      if (orderItems[itemIndex].quantity > 1) {
+        orderItems[itemIndex].quantity -= 1;
+      } else {
+        orderItems.splice(itemIndex, 1); // Remove completely if quantity is 1
+      }
+
+      saveCart();
+      updateOrderSummary();
+
+      // Optional: Also update the photo card's total-items display if it exists
+      const photo = btn.closest(".photo");
+      const counter = photo?.querySelector(".total-items");
+      if (counter && orderItems[itemIndex]) {
+        counter.textContent = String(orderItems[itemIndex].quantity);
+      }
+    }
+  });
+});
+ 
 
   // "Order Now" buttons (can be many)
   document.querySelectorAll(".order-button").forEach((btn) => {
@@ -172,3 +204,5 @@ function wireContinueShopping() {
 document.addEventListener("DOMContentLoaded", () => {
   wireContinueShopping(); // Set up the continue shopping button
 });
+
+
